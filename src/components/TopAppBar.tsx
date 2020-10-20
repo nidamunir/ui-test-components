@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginBottom:20,
     },
     appBar: {
-      backgroundColor:"lightBlue"
+      backgroundColor:"pink"
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -39,7 +39,7 @@ export default function TopAppBar() {
           <Typography variant="h6" className={classes.title}>
             News
           </Typography>
-          <Button color="teal">Login</Button>
+          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
