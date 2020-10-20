@@ -2,9 +2,12 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 const deps = require("./package.json").dependencies;
-module.exports = {
+module.exports = (_, args) => ({
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath:
+      args.mode === "development"
+        ? "http://localhost:8080/"
+        : "https://ui-test-components.vercel.app/:8080",
   },
 
   resolve: {
@@ -60,4 +63,4 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
-};
+});
