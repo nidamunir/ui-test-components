@@ -7,7 +7,7 @@ module.exports = (_, args) => ({
     publicPath:
       args.mode === "development"
         ? "http://localhost:8080/"
-        : "https://ui-test-components.vercel.app/:8080",
+        : "https://ui-test-components.vercel.app:8080",
   },
 
   resolve: {
