@@ -11,13 +11,17 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
-      marginBottom:20
+      marginBottom:20,
+    },
+    appBar: {
+      backgroundColor:"lightBlue"
     },
     menuButton: {
       marginRight: theme.spacing(2),
     },
     title: {
       flexGrow: 1,
+      color:"teal"
     },
   }),
 );
@@ -27,7 +31,7 @@ export default function TopAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             {/* <MenuIcon /> */}
@@ -35,7 +39,7 @@ export default function TopAppBar() {
           <Typography variant="h6" className={classes.title}>
             News
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="teal">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
