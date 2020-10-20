@@ -43,10 +43,12 @@ module.exports = (_, args) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "starter",
+      name: "ui",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./TopAppBar": "./src/components/TopAppBar",
+      },
       shared: {
         ...deps,
         react: {
